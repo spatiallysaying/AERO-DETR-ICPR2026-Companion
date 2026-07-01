@@ -1,0 +1,21 @@
+# ── Large artifacts restored from Zenodo (do NOT commit) ─────────────────────
+# Downloaded by 1_download_dataset.py (DOI 10.5281/zenodo.21094439)
+models/
+rasters/
+*.zip
+*.part
+
+# ── Pipeline-generated outputs ───────────────────────────────────────────────
+reproduce_output_*/
+reproduce_seed*/
+figures/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ── OS / editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

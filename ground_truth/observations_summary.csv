@@ -1,0 +1,6 @@
+Category,Num_Airports,Num_Failed_Airports,Num_Passed_Airports,IoU_Mean,Num_Airports_IoU_80
+single,25,0,25,0.906404149,23
+parallel,25,0,25,0.90660904,22
+inter,24,0,24,0.861408919,5
+mixed,26,0,26,0.887440868,14
+complex,25,0,25,0.901790891,17

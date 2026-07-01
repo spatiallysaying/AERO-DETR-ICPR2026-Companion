@@ -1,0 +1,28 @@
+# AERO-DETR Companion — reproduction dependencies
+# Install with:  pip install -r requirements.txt
+# NOTE: GDAL must match your system libgdal. On Colab/Linux install the system
+#       libs first (see README.md § Google Colab), then the GDAL wheel.
+
+# ── Geospatial core ──────────────────────────────────────────────
+numpy
+pandas
+geopandas
+shapely>=2.0
+rasterio
+affine
+fiona
+pyproj
+GDAL
+
+# ── Imagery / computer vision ────────────────────────────────────
+opencv-python
+Pillow
+matplotlib
+tqdm
+
+# ── Deep learning ────────────────────────────────────────────────
+torch
+ultralytics
+
+# ── Runway heading (magnetic declination) ────────────────────────
+geomag
