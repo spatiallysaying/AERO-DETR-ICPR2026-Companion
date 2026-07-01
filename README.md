@@ -5,6 +5,15 @@ runway-extraction pipeline: coarse oriented-bounding-box detection (YOLOv8-OBB) 
 horizontal normalisation → marking/runway detection (RT-DETR) → polygon reconstruction →
 per-airport IoU vs. ground truth.
 
+## One-click quick check (Google Colab)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/spatiallysaying/AERO-DETR-ICPR2026-Companion/blob/main/Reproduce_AERO_DETR_Pipeline.ipynb)
+
+Click the badge to open `Reproduce_AERO_DETR_Pipeline.ipynb` directly in Colab, then
+**Runtime → Run all** (select a **GPU** runtime first). The notebook clones the repo,
+installs dependencies, downloads the Zenodo dataset + checkpoints, runs the full pipeline,
+and rebuilds Table 3 — no local setup required.
+
 - **Dataset & model checkpoints:** Zenodo — DOI [10.5281/zenodo.21094439](https://doi.org/10.5281/zenodo.21094439)
 - **Imagery format:** georeferenced JPEG2000 (`*.jp2`)
 - Large artifacts (`rasters/`, `models/`) are **not** committed — they are downloaded from
