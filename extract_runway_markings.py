@@ -18,7 +18,6 @@ from tqdm import tqdm
 from osgeo import gdal
 
 import torch
-import wget
 
 from geo_utils import *
 from geo_utils import get_center
