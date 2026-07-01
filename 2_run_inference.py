@@ -1,7 +1,7 @@
 """
 AERO-DETR Runway Extraction — Reproduction Inference CLI
 Reproduces ICPR Table 3 (validation metrics per runway configuration) end-to-end.
-Pipeline (unchanged from AERO_DETR_Pipeline_all.ipynb):
+Pipeline stages:
   1. Coarse runway-area OBB detection (YOLOv8x-OBB)
   2. Horizontal normalisation of candidate strips
   3. Marking/runway detection (RT-DETR) + polygon reconstruction
