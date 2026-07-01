@@ -15,7 +15,9 @@ installs dependencies, downloads the Zenodo dataset + checkpoints, runs the full
 and rebuilds Table 3 — no local setup required.
 
 - **Dataset & model checkpoints:** Zenodo — DOI [10.5281/zenodo.21094439](https://doi.org/10.5281/zenodo.21094439)
-- **Imagery format:** georeferenced JPEG2000 (`*.jp2`)
+- **Imagery format:** georeferenced JPEG2000 (`*.jp2`, *lossy* compression). The archived
+  rasters are lossy-compressed, so per-category IoU may deviate by up to ~1 point from a run
+  on the original lossless GeoTIFFs; the aggregate IoU is unaffected.
 - Large artifacts (`rasters/`, `models/`) are **not** committed — they are downloaded from
   Zenodo by `1_download_dataset.py`. Ground-truth vectors ship inside this repo.
 
