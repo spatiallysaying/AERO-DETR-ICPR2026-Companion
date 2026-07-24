@@ -28,7 +28,6 @@ and rebuilds Table 3 — no local setup required.
 ```
 1_download_dataset.py     # step 1: fetch rasters/*.jp2 + models/*.pt from Zenodo
 2_run_inference.py        # step 2 (canonical): headless full pipeline -> metrics/reproduce_table3.csv
-run_inference.py          # compatibility alias that forwards to 2_run_inference.py
 3_ablation_fixes.py       # ablation A: fallback + 1:1 matching (offline, no GPU)
 4_ablation_hullmar.py     # ablation B: hull->MAR + padding sweep -> metrics/ablation_hullmar.csv
 5_make_hull_mar_fig.py    # renders figures/hull_vs_mar.png
@@ -47,7 +46,7 @@ Runway configurations (categories): `single`, `parallel`, `inter`, `mixed`, `com
 ### Reproducibility artifacts at a glance
 
 - **Repository (scripts + evaluation + environment specs):** https://github.com/spatiallysaying/AERO-DETR-ICPR2026-Companion
-- **Inference CLI:** `2_run_inference.py` (canonical) and `run_inference.py` (compatibility alias)
+- **Inference CLI:** `2_run_inference.py` (canonical)
 - **Evaluation outputs:** `metrics/reproduce_table3.csv`, `metrics/reproduce_output_times.csv`
 - **Environment specifications:** `requirements.txt` and `environment.yml`
 - **Dataset + checkpoints archive:** Zenodo DOI [10.5281/zenodo.21094439](https://doi.org/10.5281/zenodo.21094439)
@@ -74,8 +73,6 @@ python 2_run_inference.py --categories inter
 ```
 
 Canonical order is: `python 1_download_dataset.py` then `python 2_run_inference.py`.
-The `run_inference.py` file exists only for compatibility with manuscript/reviewer naming and
-simply forwards to `2_run_inference.py`.
 
 Outputs land in `metrics/` (`reproduce_table3.csv`, `reproduce_output_times.csv`).
 Per-airport intermediate predictions are written to `reproduce_output_<category>/`.
